@@ -25,6 +25,7 @@ export default function TestimonialsSection() {
                   {item.photo ? (
                     <img
                       src={item.photo}
+                      alt={item.name || "Testimonial"}
                       className="h-full w-full object-cover rounded-[2rem]"
                     />
                   ) : (
