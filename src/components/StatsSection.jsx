@@ -3,18 +3,24 @@ import Reveal from "./Reveal";
 import { stats } from "../data/siteData";
 
 export default function StatsSection() {
+  const customStats = [
+    { label: "Trader tham gia", value: "12k+" },
+    { label: "Hoàn phí đã trả", value: "2.3M+" },
+    { label: "Sàn giao dịch", value: "6+" }
+  ];
+
   return (
-    <section className="py-2">
+    <section className="py-20 border-t border-zinc-900 bg-black">
       <Container>
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {stats.map((item, index) => (
+        <div className="flex flex-col md:flex-row items-center justify-around gap-12 md:gap-4 text-center">
+          {customStats.map((item, index) => (
             <Reveal
               key={item.label}
-              delay={index * 80}
-              className="hover-lift rounded-[1.75rem] border border-lime-400/20 bg-zinc-950/80 p-6 shadow-[0_0_20px_rgba(163,230,53,0.06)]"
+              delay={index * 100}
+              className="flex-1 border-r border-zinc-900 last:border-r-0"
             >
-              <div className="text-4xl font-black text-lime-300">{item.value}</div>
-              <div className="mt-2 text-zinc-300">{item.label}</div>
+              <div className="text-5xl md:text-6xl font-black text-white mb-2">{item.value}</div>
+              <div className="text-zinc-500 font-medium tracking-wide uppercase text-sm">{item.label}</div>
             </Reveal>
           ))}
         </div>

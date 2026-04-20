@@ -6,21 +6,23 @@ import { faqs } from "../data/siteData";
 export default function FaqSection() {
   return (
     <section id="faq" className="py-16">
-      <Container className="max-w-5xl">
-        <Reveal className="mb-8 text-center">
-          <SectionBadge>Câu hỏi thường gặp</SectionBadge>
-          <h2 className="text-3xl font-black md:text-5xl">FAQ về Traderlaso1</h2>
+      <Container className="max-w-3xl">
+        <Reveal className="mb-12 text-center text-sm font-medium text-neon-400 tracking-widest uppercase">
+          FAQ
+        </Reveal>
+        <Reveal className="mb-14 text-center">
+          <h2 className="text-3xl font-black md:text-5xl text-white">Chúng tôi có câu trả lời</h2>
         </Reveal>
 
-        <div className="space-y-4">
+        <div className="space-y-0">
           {faqs.map((item, index) => (
             <Reveal key={item.q} delay={index * 70}>
-              <details className="group hover-lift rounded-[1.5rem] border border-zinc-800 bg-zinc-950/80 p-6 transition duration-300 open:border-lime-400/20 open:bg-zinc-950">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-white">
+              <details className="group border-b border-zinc-900 py-6 transition duration-300">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-white uppercase tracking-wide text-sm">
                   {item.q}
-                  <span className="text-lime-300 transition group-open:rotate-45">＋</span>
+                  <span className="text-zinc-500 transition group-open:rotate-45">+</span>
                 </summary>
-                <p className="mt-4 leading-8 text-zinc-400">{item.a}</p>
+                <p className="mt-4 leading-relaxed text-zinc-400 pr-12">{item.a}</p>
               </details>
             </Reveal>
           ))}
