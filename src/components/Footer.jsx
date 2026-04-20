@@ -30,8 +30,8 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-            <a href="#" className="hover:text-white transition">Privacy & Cookies Policy</a>
-            <a href="#" className="hover:text-white transition">Terms & Conditions</a>
+            <a href="/" className="hover:text-white transition">Privacy & Cookies Policy</a>
+            <a href="/" className="hover:text-white transition">Terms & Conditions</a>
           </div>
           <div className="mt-4 md:mt-0">Traderlaso1</div>
         </div>

@@ -1,6 +1,5 @@
 import Container from "./Container";
 import Reveal from "./Reveal";
-import { stats } from "../data/siteData";
 
 export default function StatsSection() {
   const customStats = [

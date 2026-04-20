@@ -1,5 +1,4 @@
 import Container from "./Container";
-import SectionBadge from "./SectionBadge";
 import Reveal from "./Reveal";
 import { faqs } from "../data/siteData";
 
