@@ -40,22 +40,13 @@ export const benefits = [
 
 export const testimonials = [
   {
-    name: "Anh Việt",
-    role: "Trader Futures",
-    quote:
-      "Admin rất nhiệt tình, cộng đồng sôi nổi, từ khi mình tham gia đã rút ra được rất nhiều kinh nghiệm trong thị trường",
+    photo: "/comments/kevinPhuc.png"
   },
   {
-    name: "T. Minh",
-    role: "Crypto Investor",
-    quote:
-      "Bot rất ngon, bú đẫm lệ hehe",
+    photo: "/comments/Nnminh87.png"
   },
   {
-    name: "Chi Thành",
-    role: "Smart Trader",
-    quote:
-      "Là một cộng đồng mà có tín hiệu chất lượng nhất tôi từng gặp. Đặc biệt là bot",
+    photo: "/comments/TranBang.png"
   },
 ];
 

@@ -14,17 +14,26 @@ export default function TestimonialsSection() {
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {testimonials.map((item, index) => (
-            <Reveal key={item.name} delay={index * 90} className="break-inside-avoid rounded-[2rem] border border-zinc-800 bg-zinc-900/80 p-8 hover-panel">
-              <div className="mb-6 flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-800 text-lg font-bold text-white">
-                  {item.name.charAt(0)}
-                </div>
-                <div>
-                  <div className="font-bold text-white text-lg">{item.name}</div>
-                  <div className="text-xs text-zinc-500 uppercase tracking-wider">{item.role}</div>
+            <Reveal
+              key={item.name || index}
+              delay={index * 90}
+              className="break-inside-avoid rounded-[2rem] border border-zinc-800 bg-zinc-900/80 p-2 hover-panel relative overflow-hidden group"
+            >
+              <div className="flex flex-col gap-6 relative z-10">
+                {/* Author Info */}
+                <div className="flex items-center gap-4">
+                  {item.photo ? (
+                    <img
+                      src={item.photo}
+                      className="h-full w-full object-cover rounded-[2rem]"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center text-xl font-bold text-white">
+                      {item.name?.charAt(0) || "?"}
+                    </div>
+                  )}
                 </div>
               </div>
-              <p className="leading-relaxed text-zinc-400">“{item.quote}”</p>
             </Reveal>
           ))}
         </div>
