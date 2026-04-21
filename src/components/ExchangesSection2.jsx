@@ -48,7 +48,7 @@ export default function ExchangesSection2() {
                     />
                   </div>
                   <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-lime-400/10 to-transparent opacity-50"></div>
-                  <div className="relative z-10 text-[10px] font-medium tracking-wider text-zinc-500 uppercase md:text-xs">
+                  <div className="relative z-10 pt-1 md:pt-2 text-[10px] font-medium tracking-wider text-zinc-500 uppercase md:text-xs">
                     Code: <span className="text-lime-400">{item.referralCode}</span>
                   </div>
                 </div>
