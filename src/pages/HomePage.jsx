@@ -15,12 +15,11 @@ export default function HomePage({ onOpenGuide }) {
       <HeroSection onOpenGuide={onOpenGuide} />
       <PartnerMarquee />
       <FeaturesSection />
+      <ExchangesSection />
       <BenefitsSection />
       <StatsSection />
       <TestimonialsSection />
       <FaqSection />
-      {/* Retained original sections below or interspersed to preserve content */}
-      <ExchangesSection />
       <ReasonSection />
       <DiscordSection />
     </>
