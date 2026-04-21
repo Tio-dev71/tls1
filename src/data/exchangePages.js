@@ -153,7 +153,7 @@ export const exchangePages = [
     link: "https://bingxdao.com/invite/GRIWGPDA/",
     logo: "/logo/bingx.png",
     logomini: "/logo/bingxmini.jpeg",
-    logotext: "/logo/bingxText.png",
+    logotext: "/logo/BingxText.png",
     logoScale: 4.1,
     registerLabel: "Đăng Ký BingX",
     introTitle: "Hướng Dẫn Nhanh Cách Nhận Hoàn Phí BingX",
