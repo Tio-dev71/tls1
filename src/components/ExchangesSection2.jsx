@@ -28,7 +28,7 @@ export default function ExchangesSection2() {
         <Reveal duration={850}>
           <div
             ref={scrollRef}
-            className="hide-scrollbar flex gap-3 overflow-x-auto pt-4 pb-4 snap-x snap-mandatory md:gap-6"
+            className="hide-scrollbar flex items-stretch gap-3 overflow-x-auto pt-4 pb-4 snap-x snap-mandatory md:gap-6"
           >
             {exchangePages.map((item) => (
               <Reveal
@@ -37,23 +37,25 @@ export default function ExchangesSection2() {
                 className="group relative h-full w-[calc(50%-6.5px)] flex-shrink-0 snap-start md:w-auto md:min-w-[380px] flex flex-col justify-between rounded-3xl border border-zinc-800 bg-zinc-900/50 p-4 transition-all duration-500 hover:border-lime-400/30 hover:bg-zinc-900/60 md:rounded-[2.5rem] md:p-8 hover-panel"
               >
                 <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-lime-400/10 blur-[60px] transition-all group-hover:bg-lime-400/20" />
-                <div className="mb-4 w-full h-20 md:h-28 bg-white/[0.03] rounded-2xl border border-white/10 flex flex-col items-center justify-center relative overflow-hidden p-2 md:p-4 md:mb-6">
+                <div className="mb-4 w-full h-24 md:h-32 bg-white/[0.03] rounded-2xl border border-white/10 flex flex-col items-center justify-between relative overflow-hidden p-4 md:p-6 md:mb-6">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.05)_0%,transparent_70%)]"></div>
-                  <img
-                    src={item.logotext}
-                    alt={item.name}
-                    style={{ transform: `scale(${item.logoScale || 1})` }}
-                    className="relative z-10 h-10 md:h-14 w-full object-contain filter brightness-110 mb-1 md:mb-2"
-                  />
+                  <div className="flex-1 flex items-center justify-center w-full relative z-10">
+                    <img
+                      src={item.logotext}
+                      alt={item.name}
+                      style={{ transform: `scale(${item.logoScale || 1})` }}
+                      className="h-9 md:h-14 w-auto max-w-[80%] object-contain"
+                    />
+                  </div>
                   <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-lime-400/10 to-transparent opacity-50"></div>
-                  <div className="relative pt-2 z-10 text-[10px] font-medium tracking-wider text-zinc-500 uppercase md:text-sm">
+                  <div className="relative z-10 text-[10px] font-medium tracking-wider text-zinc-500 uppercase md:text-xs">
                     Code: <span className="text-lime-400">{item.referralCode}</span>
                   </div>
                 </div>
 
-                <div className="mb-4 md:mb-6">
+                <div className="mb-4 md:mb-6 min-h-[60px] md:min-h-[100px]">
                   <h3 className="text-xl font-bold text-white md:text-3xl">{item.name}</h3>
-                  <p className="mt-1 text-[11px] text-zinc-400 md:mt-2 md:text-base">{item.sub}</p>
+                  <p className="mt-1 text-[11px] text-zinc-400 md:mt-2 md:text-base line-clamp-2">{item.sub}</p>
                 </div>
 
                 <div className="mb-4 mt-auto md:mb-8">
