@@ -61,6 +61,10 @@ export default function FeaturesSection() {
             </Reveal>
           </div>
         </div>
+
+        <Reveal className="mt-5 flex flex-col items-center text-center">
+          <SectionBadge>Bạn trade trực tiếp trên sàn – chúng tôi không giữ tiền</SectionBadge>
+        </Reveal>
       </Container>
     </section>
   );

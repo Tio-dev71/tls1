@@ -38,13 +38,14 @@ export default function DiscordSection() {
             <SectionBadge>Discord Community + Smart Bot</SectionBadge>
 
             <h2 className="mt-4 text-3xl font-black leading-tight text-white md:text-5xl">
-              Một server Discord không chỉ để giao lưu về thị trường
-              <span className="text-lime-300"> mà còn có bot hỗ trợ trader mỗi ngày.</span>
+              Một hệ thống
+              <span className="text-lime-300"> tất cả trong 1 cho trader</span>
             </h2>
 
             <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300">
               🤖 Bot hỗ trợ trader 24/7 + tín hiệu mỗi ngày
               Hỏi đáp, phân tích và nhận plan giao dịch ngay trong Discord — tất cả trong 1 hệ thống
+              Signal + Bot + Cộng đồng
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">

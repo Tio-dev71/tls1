@@ -11,7 +11,7 @@ export default function Navbar({ onOpenGuide }) {
       <Container className="flex items-center justify-between gap-6">
         <Link to="/" className="group flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-black transition duration-300 group-hover:scale-105">
-            <span className="text-xl">⚡</span>
+            <img src="/logo.jpg" alt="logoTLS1" className="rounded-md"/>
           </div>
         </Link>
 

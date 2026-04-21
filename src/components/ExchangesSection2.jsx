@@ -4,7 +4,7 @@ import SectionBadge from "./SectionBadge";
 import Reveal from "./Reveal";
 import { exchangePages } from "../data/exchangePages";
 
-export default function ExchangesSection() {
+export default function ExchangesSection2() {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -31,50 +31,49 @@ export default function ExchangesSection() {
             className="hide-scrollbar flex gap-3 overflow-x-auto pt-4 pb-4 snap-x snap-mandatory md:gap-6"
           >
             {exchangePages.map((item) => (
-              <div
+              <Reveal
                 key={item.name}
-                className="group relative h-full w-[calc(50%-6.5px)] flex-shrink-0 snap-start md:w-auto md:min-w-[380px]"
+                delay={100}
+                className="group relative h-full w-[calc(50%-6.5px)] flex-shrink-0 snap-start md:w-auto md:min-w-[380px] flex flex-col justify-between rounded-3xl border border-zinc-800 bg-zinc-900/50 p-4 transition-all duration-500 hover:border-lime-400/30 hover:bg-zinc-900/60 md:rounded-[2.5rem] md:p-8 hover-panel"
               >
-                <div className="hover-lift relative flex h-full flex-col overflow-hidden rounded-3xl border border-lime-400/10 bg-zinc-900/40 p-4 transition-all duration-500 hover:border-lime-400/30 hover:bg-zinc-900/60 md:rounded-[2.5rem] md:p-8">
-                  <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-lime-400/10 blur-[60px] transition-all group-hover:bg-lime-400/20" />
-
-                  <div className="mb-4 flex items-center justify-between md:mb-8">
-                    <div className="flex h-10 w-10 items-center justify-center transition-transform duration-500 group-hover:scale-110 md:h-16 md:w-16">
-                      <img
-                        src={item.logomini}
-                        alt={item.name}
-                        className="h-full w-full object-contain rounded-[5px]"
-                      />
-                    </div>
-                    <div className="text-[10px] font-medium tracking-wider text-zinc-500 uppercase md:text-sm">
-                      Code: <span className="text-lime-400">{item.referralCode}</span>
-                    </div>
+                <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-lime-400/10 blur-[60px] transition-all group-hover:bg-lime-400/20" />
+                <div className="mb-4 w-full h-20 md:h-28 bg-white/[0.03] rounded-2xl border border-white/10 flex flex-col items-center justify-center relative overflow-hidden p-2 md:p-4 md:mb-6">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.05)_0%,transparent_70%)]"></div>
+                  <img
+                    src={item.logotext}
+                    alt={item.name}
+                    style={{ transform: `scale(${item.logoScale || 1})` }}
+                    className="relative z-10 h-10 md:h-14 w-full object-contain filter brightness-110 mb-1 md:mb-2"
+                  />
+                  <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-lime-400/10 to-transparent opacity-50"></div>
+                  <div className="relative pt-2 z-10 text-[10px] font-medium tracking-wider text-zinc-500 uppercase md:text-sm">
+                    Code: <span className="text-lime-400">{item.referralCode}</span>
                   </div>
-
-                  <div className="mb-4 md:mb-6">
-                    <h3 className="text-xl font-bold text-white md:text-3xl">{item.name}</h3>
-                    <p className="mt-1 text-[11px] text-zinc-400 md:mt-2 md:text-base">{item.sub}</p>
-                  </div>
-
-                  <div className="mb-4 mt-auto md:mb-8">
-                    <div className="text-[9px] font-semibold uppercase tracking-widest text-lime-400/80 md:text-xs">
-                      Hoàn phí lên đến
-                    </div>
-                    <div className="text-3xl font-black tracking-tight text-white md:text-7xl">
-                      {item.totalRebate}
-                    </div>
-                  </div>
-
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="button-glow flex w-full items-center justify-center rounded-xl bg-lime-400 py-2.5 text-center text-xs font-bold text-black transition-all hover:scale-[1.02] active:scale-95 md:rounded-2xl md:py-4 md:text-base"
-                  >
-                    Hoàn Phí
-                  </a>
                 </div>
-              </div>
+
+                <div className="mb-4 md:mb-6">
+                  <h3 className="text-xl font-bold text-white md:text-3xl">{item.name}</h3>
+                  <p className="mt-1 text-[11px] text-zinc-400 md:mt-2 md:text-base">{item.sub}</p>
+                </div>
+
+                <div className="mb-4 mt-auto md:mb-8">
+                  <div className="text-[9px] font-semibold uppercase tracking-widest text-lime-400/80 md:text-xs">
+                    Hoàn phí lên đến
+                  </div>
+                  <div className="text-3xl font-black tracking-tight text-white md:text-7xl">
+                    {item.totalRebate}
+                  </div>
+                </div>
+
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button-glow flex w-full items-center justify-center rounded-xl bg-lime-400 py-2.5 text-center text-xs font-bold text-black transition-all hover:scale-[1.02] active:scale-95 md:rounded-2xl md:py-4 md:text-base"
+                >
+                  Hoàn Phí
+                </a>
+              </Reveal>
             ))}
           </div>
 

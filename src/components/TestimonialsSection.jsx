@@ -9,7 +9,7 @@ export default function TestimonialsSection() {
       <Container>
         <Reveal className="mb-14 flex flex-col items-center text-center">
           <SectionBadge>Khách hàng nói gì về chúng tôi</SectionBadge>
-          <h2 className="text-3xl font-black md:text-5xl mt-4">Trải nghiệm thực tế</h2>
+          <h2 className="text-3xl font-black md:text-5xl mt-4">Trader nói gì sau khi tham gia hệ thống</h2>
         </Reveal>
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">

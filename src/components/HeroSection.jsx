@@ -24,18 +24,17 @@ export default function HeroSection({ onOpenGuide }) {
 
         <Reveal className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full justify-center max-w-md mx-auto" delay={300}>
           <div className="flex w-full overflow-hidden rounded-full border border-zinc-700 bg-zinc-900/50 p-1 backdrop-blur-xl">
-             <button
-                type="button"
-                onClick={() => onOpenGuide?.({ source: "hero-primary" })}
+             <a
+                href="#san"
                 className="w-full sm:w-auto flex-1 rounded-full bg-neon-400 px-8 py-3.5 text-sm font-bold text-black shadow-[0_0_20px_rgba(225,255,1,0.3)] transition hover:bg-neon-500 hover:scale-105"
               >
-                Bắt đầu hoàn phí ngay
-              </button>
+                Nhận hoàn phí ngay
+              </a>
               <a
-                href="#san"
+                href="https://discord.gg/psZnKmM82d"
                 className="w-full sm:w-auto flex-1 flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-semibold text-white transition hover:text-neon-400"
               >
-                Xem hệ thống
+                Vào Group Miễn Phí
               </a>
           </div>
         </Reveal>

@@ -3,39 +3,44 @@ export const stats = [
 
 export const exchanges = [
   { name: "Binance", rebate: "Lên đến 50%", code: "813528158", bonus: "Hỗ trợ nhanh" },
-  { name: "Bybit", rebate: "50%", code: "TLS1", bonus: "Ưu đãi VIP" },
-  { name: "OKX", rebate: "40%", code: "HoanPhiTLS1", bonus: "Ưu đãi VIP" },
+  { name: "Bybit", rebate: "50%", code: "HoanPhi50", bonus: "Ưu đãi VIP" },
+  { name: "OKX", rebate: "40%", code: "HoanPhi50", bonus: "Ưu đãi VIP" },
   { name: "BingX", rebate: "50%", code: "GRIWGP", bonus: "Copy trade" },
   { name: "Bitget", rebate: "50%", code: "rx7u7usk", bonus: "Bonus nhóm" },
-  { name: "MEXC", rebate: "50%", code: "HoanPhiTLS1", bonus: "Phù hợp altcoin" },
+  { name: "MEXC", rebate: "50%", code: "HoanPhi50", bonus: "Phù hợp altcoin" },
 ];
 
 export const features = [
   {
-    title: "💸 Hoàn lại đến 50% phí giao dịch mỗi ngày",
-    desc: "Giảm phí mọi giao dịch trên các sàn top thế giới",
+    title: "💰 Hoàn phí 30–50% mỗi lệnh.",
+    desc: "Giữ lại nhiều lợi nhuận hơn",
   },
   {
-    title: "⚙️ Hệ thống bot tự động tổng hợp -  hoàn phí về tài khoản sau 23h mỗi ngày.",
-    desc: "Hệ thống bot 24/7 dễ dàng sử dụng. Admin thân thiện, hỗ trợ nhiệt tình",
+    title: "⚙️ Bot tracking tự động 24/7.",
+    desc: "Ghi nhận phí theo thời gian thực Hoàn phí sau mỗi 24h Không chỉnh sửa thủ công",
   },
   {
-    title: "🚀 Đã hoàn $2,314,829 - cho hơn 12,000 traders",
-    desc: "Với cộng đồng giao lưu sôi nổi. Nhiệt tình, hòa đồng, giúp đỡ lẫn nhau",
+    title: "🚀 Đã hoàn $2,314,829+ cho 12,000+ traders",
+    desc: "Có số liệu minh bạch",
   },
   {
-    title: "👥 12,000+ traders đang sử dụng hoàn phí từ hệ thống TLS1",
-    desc: "Đã chia sẻ và giúp hoàn phí cho nhiều trader trong và ngoài nước",
+    title: "👥 12,000+ traders đang sử dụng hệ thống",
+    desc: "Cộng đồng active Có signal mỗi ngày Hỗ trợ liên tục",
   },
 ];
 
 export const benefits = [
-  "Hoàn phí giao dịch rõ ràng, minh bạch theo từng sàn",
-  "Hỗ trợ đăng ký và nhập mã ưu đãi nhanh chóng",
-  "Cộng đồng trader trao đổi tín hiệu và kinh nghiệm",
-  "Ưu đãi riêng cho tài khoản lớn và nhóm VIP",
-  "Đội ngũ Admin hỗ trợ nhanh chóng, nhiệt tình",
-  "Admin call chia sẻ kiến thức, kinh nghiệm, thực chiến",
+  "Hoàn phí hiển thị rõ",
+  "Theo dõi trực tiếp",
+  "Không chỉnh sửa",
+
+  "Chia sẻ tín hiệu mỗi ngày",
+  "Học hỏi kinh nghiệm",
+  "Hỗ trợ liên tục",
+
+  "Admin hỗ trợ nhanh",
+  "Chia sẻ kinh nghiệm",
+  "Không lý thuyết suông",
 ];
 
 export const testimonials = [
