@@ -385,6 +385,16 @@ img {
   }
 }
 
+@keyframes swipe-hint {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-swipe-hint {
+  animation: swipe-hint 3s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
