@@ -35,23 +35,25 @@ export default function ExchangesSection() {
                 key={item.name}
                 className="group relative h-full w-[calc(50%-6.5px)] flex-shrink-0 snap-start md:w-auto md:min-w-[380px]"
               >
-                <div className="hover-lift relative flex h-full flex-col overflow-hidden rounded-3xl border border-lime-400/10 bg-zinc-900/40 p-4 transition-all duration-500 hover:border-lime-400/30 hover:bg-zinc-900/60 md:rounded-[2.5rem] md:p-8">
+                <div className="hover-lift hover-glow-border relative flex h-full flex-col overflow-hidden rounded-3xl border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-4 transition-all duration-500 hover:border-lime-400/50 hover:bg-white/[0.05] md:rounded-[2.5rem] md:p-8">
                   <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-lime-400/10 blur-[60px] transition-all group-hover:bg-lime-400/20" />
 
-                  <div className="mb-4 flex items-center justify-between md:mb-8">
-                    <div className="flex h-10 w-10 items-center justify-center transition-transform duration-500 group-hover:scale-110 md:h-16 md:w-16">
+                  <div className="mb-4 w-full bg-white/[0.03] rounded-2xl border border-white/10 flex items-center justify-between relative overflow-hidden p-4 md:p-6 md:mb-8">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.05)_0%,transparent_70%)]"></div>
+                    <div className="relative z-10 flex h-10 w-10 items-center justify-center transition-transform duration-500 group-hover:scale-110 md:h-16 md:w-16">
                       <img
                         src={item.logomini}
                         alt={item.name}
                         className="h-full w-full object-contain rounded-[5px]"
                       />
                     </div>
-                    <div className="text-[10px] font-medium tracking-wider text-zinc-500 uppercase md:text-sm">
+                    <div className="relative z-10 text-[10px] font-medium tracking-wider text-zinc-500 uppercase md:text-sm">
                       Code: <span className="text-lime-400">{item.referralCode}</span>
                     </div>
+                    <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-lime-400/10 to-transparent opacity-50"></div>
                   </div>
 
-                  <div className="mb-4 md:mb-6">
+                  <div className="mb-4 md:mb-6 min-h-[60px] md:min-h-[100px]">
                     <h3 className="text-xl font-bold text-white md:text-3xl">{item.name}</h3>
                     <p className="mt-1 text-[11px] text-zinc-400 md:mt-2 md:text-base">{item.sub}</p>
                   </div>

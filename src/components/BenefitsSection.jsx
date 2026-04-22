@@ -15,21 +15,21 @@ export default function BenefitsSection() {
         </Reveal>
 
         <div className="grid gap-6 md:grid-cols-3 mb-6">
-          <Reveal delay={100} className="flex flex-col rounded-[2rem] border border-zinc-800 bg-zinc-900/50 p-8 hover-panel">
+          <Reveal delay={100} className="flex flex-col rounded-[2rem] border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-8 hover-panel hover-glow-border">
             <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-neon-400/20 text-neon-400 text-2xl">✨</div>
             <h3 className="text-xl font-bold text-white mb-2">Minh bạch rõ ràng</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">{benefits[0]}</p>
             <p className="text-zinc-400 text-sm leading-relaxed">{benefits[1]}</p>
             <p className="text-zinc-400 text-sm leading-relaxed">{benefits[2]}</p>
           </Reveal>
-          <Reveal delay={200} className="flex flex-col rounded-[2rem] border border-zinc-800 bg-zinc-900/50 p-8 hover-panel">
+          <Reveal delay={200} className="flex flex-col rounded-[2rem] border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-8 hover-panel hover-glow-border">
             <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-neon-400/20 text-neon-400 text-2xl">🤝</div>
             <h3 className="text-xl font-bold text-white mb-2">Cộng đồng trader active</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">{benefits[3]}</p>
             <p className="text-zinc-400 text-sm leading-relaxed">{benefits[4]}</p>
             <p className="text-zinc-400 text-sm leading-relaxed">{benefits[5]}</p>
           </Reveal>
-          <Reveal delay={300} className="flex flex-col rounded-[2rem] border border-zinc-800 bg-zinc-900/50 p-8 hover-panel">
+          <Reveal delay={300} className="flex flex-col rounded-[2rem] border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-8 hover-panel hover-glow-border">
             <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-neon-400/20 text-neon-400 text-2xl">🎯</div>
             <h3 className="text-xl font-bold text-white mb-2">Hỗ trợ & kiến thức thực chiến</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">{benefits[5]}</p>
@@ -38,7 +38,7 @@ export default function BenefitsSection() {
           </Reveal>
         </div>
 
-        <Reveal className="grid gap-8 lg:grid-cols-[1fr_1.2fr] rounded-[2rem] border border-zinc-800 bg-zinc-900 overflow-hidden" duration={850}>
+        <Reveal className="grid gap-8 lg:grid-cols-[1fr_1.2fr] rounded-[2rem] border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl overflow-hidden hover-glow-border" duration={850}>
           <div className="p-10 flex flex-col justify-center">
             <SectionBadge>Gói quyền lợi VIP</SectionBadge>
             <h2 className="text-3xl font-black md:text-4xl mt-4 leading-tight mb-4 text-white">Hệ thống tín hiệu & bot hỗ trợ giao dịch mỗi ngày</h2>

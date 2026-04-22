@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
             <Reveal
               key={item.name || index}
               delay={index * 90}
-              className="break-inside-avoid rounded-[2rem] border border-zinc-800 bg-zinc-900/80 p-2 hover-panel relative overflow-hidden group"
+              className="break-inside-avoid rounded-[2rem] border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-2 hover-panel relative overflow-hidden group hover-glow-border"
             >
               <div className="flex flex-col gap-6 relative z-10">
                 {/* Author Info */}

@@ -16,8 +16,8 @@ export default function HomePage({ onOpenGuide }) {
       <HeroSection onOpenGuide={onOpenGuide} />
       <StatsSection />
       <PartnerMarquee />
-      {/* <ExchangesSection /> */}
-      <ExchangesSection2 />
+      <ExchangesSection />
+      {/* <ExchangesSection2 /> */}
       <FeaturesSection />
       <BenefitsSection />
       <TestimonialsSection />

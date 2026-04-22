@@ -415,3 +415,35 @@ img {
     transform: none !important;
   }
 }
+
+.hover-glow-border {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.hover-glow-border::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(163, 230, 53, 0.8) 15%, rgba(163, 230, 53, 0.2) 40%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  padding: 1.5px;
+}
+
+.hover-glow-border:hover::after {
+  opacity: 1;
+}
+
+.hover-glow-border:hover {
+  box-shadow: 
+    0 0 40px rgba(163, 230, 53, 0.25),
+    inset 0 1px 3px rgba(255, 255, 255, 0.6);
+}

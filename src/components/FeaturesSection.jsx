@@ -16,7 +16,7 @@ export default function FeaturesSection() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Main Large Card mapped to feature 0 */}
-          <Reveal delay={100} className="lg:col-span-1 flex flex-col justify-between rounded-[2rem] border border-zinc-800 bg-zinc-900/50 p-8 hover-panel">
+          <Reveal delay={100} className="lg:col-span-1 flex flex-col justify-between rounded-[2rem] border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-8 hover-panel hover-glow-border">
             <div className="mb-8 w-full h-40 bg-black/50 rounded-2xl border border-zinc-800/50 flex items-center justify-center relative overflow-hidden">
               <div className="text-4xl">💸</div>
               <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-neon-400/10 to-transparent"></div>
@@ -30,13 +30,13 @@ export default function FeaturesSection() {
           {/* Side Cards Wrapper */}
           <div className="lg:col-span-2 flex flex-col gap-6">
             <div className="grid gap-6 md:grid-cols-2 flex-1">
-              <Reveal delay={200} className="flex flex-col justify-center rounded-[2rem] border border-zinc-800 bg-zinc-900/50 p-8 hover-panel">
+              <Reveal delay={200} className="flex flex-col justify-center rounded-[2rem] border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-8 hover-panel hover-glow-border">
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-black border border-zinc-800 text-2xl">⚙️</div>
                 <h3 className="text-xl font-bold text-white mb-2">{features[1].title}</h3>
                 <p className="text-zinc-400 text-sm leading-relaxed">{features[1].desc}</p>
               </Reveal>
 
-              <Reveal delay={300} className="flex flex-col justify-center rounded-[2rem] border border-zinc-800 bg-zinc-900/50 p-8 hover-panel">
+              <Reveal delay={300} className="flex flex-col justify-center rounded-[2rem] border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-8 hover-panel hover-glow-border">
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-black border border-zinc-800 text-2xl">🚀</div>
                 <h3 className="text-xl font-bold text-white mb-2">{features[2].title}</h3>
                 <p className="text-zinc-400 text-sm leading-relaxed">{features[2].desc}</p>
@@ -44,7 +44,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Sub Badges Card mapped to feature 3 */}
-            <Reveal delay={400} className="flex flex-col md:flex-row items-center justify-between gap-6 rounded-[2rem] border border-zinc-800 bg-zinc-900/50 p-8 hover-panel">
+            <Reveal delay={400} className="flex flex-col md:flex-row items-center justify-between gap-6 rounded-[2rem] border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-8 hover-panel hover-glow-border">
               <div className="flex-1">
                 <div className="mb-4 flex gap-2">
                    <span className="flex items-center gap-1.5 rounded-full border border-zinc-700 bg-black px-3 py-1 text-xs text-zinc-300"><span className="w-2 h-2 rounded-full bg-neon-400"></span>Bot Trade</span>

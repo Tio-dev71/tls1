@@ -34,7 +34,7 @@ export default function ExchangesSection2() {
               <Reveal
                 key={item.name}
                 delay={100}
-                className="group relative h-full w-[calc(50%-6.5px)] flex-shrink-0 snap-start md:w-auto md:min-w-[380px] flex flex-col justify-between rounded-3xl border border-zinc-800 bg-zinc-900/50 p-4 transition-all duration-500 hover:border-lime-400/30 hover:bg-zinc-900/60 md:rounded-[2.5rem] md:p-8 hover-panel"
+                className="group hover-glow-border relative h-full w-[calc(50%-6.5px)] flex-shrink-0 snap-start md:w-auto md:min-w-[380px] flex flex-col justify-between rounded-3xl border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-4 transition-all duration-500 hover:border-lime-400/50 hover:bg-white/[0.05] md:rounded-[2.5rem] md:p-8 hover-panel"
               >
                 <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-lime-400/10 blur-[60px] transition-all group-hover:bg-lime-400/20" />
                 <div className="mb-4 w-full h-24 md:h-32 bg-white/[0.03] rounded-2xl border border-white/10 flex flex-col items-center justify-between relative overflow-hidden p-4 md:p-6 md:mb-6">
