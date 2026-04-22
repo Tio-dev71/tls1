@@ -3,12 +3,12 @@ import Reveal from "./Reveal";
 
 export default function HeroSection({ onOpenGuide }) {
   return (
-    <section id="gioi-thieu" className="relative pb-16 pt-24 lg:pt-32 overflow-hidden flex flex-col items-center justify-center text-center">
+    <section id="gioi-thieu" className="relative pb-16 pt-20 lg:pt-28 overflow-hidden flex flex-col items-center justify-center text-center">
       <div className="absolute inset-0 glow-arch"></div>
       <div className="glow-dot-matrix"></div>
       
       <Container className="relative z-10 flex flex-col items-center">
-        <Reveal className="-mt-6 md:-mt-8 mb-6 inline-flex rounded-full border border-neon-400/20 bg-neon-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-neon-400" delay={80}>
+        <Reveal className="-mt-12 md:-mt-16 mb-8 inline-flex rounded-full border border-neon-400/20 bg-neon-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-neon-400" delay={80}>
           Chào mừng bạn đến với Traderlaso1
         </Reveal>
 

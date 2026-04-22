@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Container from "./Container";
 import SectionBadge from "./SectionBadge";
 import Reveal from "./Reveal";
@@ -7,6 +7,38 @@ import { exchangePages } from "../data/exchangePages";
 export default function ExchangesSection2() {
   const scrollRef = useRef(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const container = scrollRef.current;
+      const scrollLeft = container.scrollLeft;
+      const children = Array.from(container.children);
+      
+      let closestIndex = 0;
+      let minDiff = Infinity;
+      
+      children.forEach((child, index) => {
+        const diff = Math.abs(child.offsetLeft - scrollLeft);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closestIndex = index;
+        }
+      });
+      
+      if (closestIndex !== activeIndex) {
+        setActiveIndex(closestIndex);
+      }
+    }
+  };
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (container) {
+      container.addEventListener("scroll", handleScroll, { passive: true });
+      return () => container.removeEventListener("scroll", handleScroll);
+    }
+  }, [activeIndex]);
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -38,7 +70,7 @@ export default function ExchangesSection2() {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={`group hover-glow-border relative h-full w-[calc(50%-6.5px)] flex-shrink-0 snap-start md:w-auto md:min-w-[380px] flex flex-col justify-between rounded-3xl border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-4 transition-all duration-500 hover:border-lime-400/50 hover:bg-white/[0.05] md:rounded-[2.5rem] md:p-8 hover-panel ${
-                  hoveredIndex === null && index === 0 ? "active-glow-border" : ""
+                  hoveredIndex === null && index === activeIndex ? "active-glow-border" : ""
                 }`}
               >
                 <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-lime-400/10 blur-[60px] transition-all group-hover:bg-lime-400/20" />

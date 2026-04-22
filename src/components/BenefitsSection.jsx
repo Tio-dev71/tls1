@@ -48,7 +48,7 @@ export default function BenefitsSection() {
                 <li>- Phân tích & plan giao dịch mỗi ngày</li>
                 <li>- Quyền lợi riêng cho thành viên VIP</li>
                 <li>- Tín hiệu Bot SMC, Bot Fibonacci, Bot Liqidation, ...</li>
-              </ul>          
+              </ul>
             </p>
             <div className="mt-auto">
               <a href="https://okx.com/join/HOANPHI50" target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-neon-400 px-6 py-3 text-sm font-bold text-black transition hover:bg-white">Đăng ký VIP ngay</a>
