@@ -2,7 +2,7 @@ import HeroSection from "../components/HeroSection";
 import StatsSection from "../components/StatsSection";
 import FeaturesSection from "../components/FeaturesSection";
 import ExchangesSection from "../components/ExchangesSection";
-import ExchangesSection2 from "../components/ExchangesSection2";
+// import ExchangesSection2 from "../components/ExchangesSection2";
 import BenefitsSection from "../components/BenefitsSection";
 // import ReasonSection from "../components/ReasonSection";
 import TestimonialsSection from "../components/TestimonialsSection";
