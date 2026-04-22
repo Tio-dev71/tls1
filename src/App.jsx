@@ -7,6 +7,7 @@ import GuideModal from "./components/GuideModal";
 import HomePage from "./pages/HomePage";
 import ExchangePage from "./pages/ExchangePage";
 import NotFoundPage from "./pages/NotFoundPage";
+import FloatingButtons from "./components/FloatingButtons";
 
 function AppShell() {
   const [isGuideModalOpen, setIsGuideModalOpen] = useState(false);
@@ -37,6 +38,7 @@ function AppShell() {
       </main>
       <Footer />
       <GuideModal isOpen={isGuideModalOpen} onClose={closeGuideModal} context={guideContext} />
+      <FloatingButtons onOpenGuide={openGuideModal} />
     </div>
   );
 }
