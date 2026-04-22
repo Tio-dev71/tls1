@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Container from "./Container";
 import SectionBadge from "./SectionBadge";
 import Reveal from "./Reveal";
@@ -6,6 +6,7 @@ import { exchangePages } from "../data/exchangePages";
 
 export default function ExchangesSection2() {
   const scrollRef = useRef(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -18,10 +19,10 @@ export default function ExchangesSection2() {
   return (
     <section id="san" className="py-16">
       <Container>
-        <Reveal className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
+        <Reveal className="mb-12 flex flex-col items-center justify-center text-center gap-4">
+          <div className="flex flex-col items-center">
             <SectionBadge>Bảng ưu đãi sàn giao dịch</SectionBadge>
-            <h2 className="text-3xl font-black md:text-5xl">Chọn sàn & bắt đầu nhận hoàn phí</h2>
+            <h2 className="mt-4 text-3xl font-black md:text-5xl">Chọn sàn & bắt đầu nhận hoàn phí</h2>
           </div>
         </Reveal>
 
@@ -30,11 +31,15 @@ export default function ExchangesSection2() {
             ref={scrollRef}
             className="hide-scrollbar flex items-stretch gap-3 overflow-x-auto pt-4 pb-4 snap-x snap-mandatory md:gap-6"
           >
-            {exchangePages.map((item) => (
+            {exchangePages.map((item, index) => (
               <Reveal
                 key={item.name}
                 delay={100}
-                className="group hover-glow-border relative h-full w-[calc(50%-6.5px)] flex-shrink-0 snap-start md:w-auto md:min-w-[380px] flex flex-col justify-between rounded-3xl border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-4 transition-all duration-500 hover:border-lime-400/50 hover:bg-white/[0.05] md:rounded-[2.5rem] md:p-8 hover-panel"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className={`group hover-glow-border relative h-full w-[calc(50%-6.5px)] flex-shrink-0 snap-start md:w-auto md:min-w-[380px] flex flex-col justify-between rounded-3xl border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-4 transition-all duration-500 hover:border-lime-400/50 hover:bg-white/[0.05] md:rounded-[2.5rem] md:p-8 hover-panel ${
+                  hoveredIndex === null && index === 0 ? "active-glow-border" : ""
+                }`}
               >
                 <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-lime-400/10 blur-[60px] transition-all group-hover:bg-lime-400/20" />
                 <div className="mb-4 w-full h-24 md:h-32 bg-white/[0.03] rounded-2xl border border-white/10 flex flex-col items-center justify-between relative overflow-hidden p-4 md:p-6 md:mb-6">
@@ -90,10 +95,10 @@ export default function ExchangesSection2() {
               </span>
             </div>
 
-            <div className="hidden gap-3 md:flex">
+            <div className="flex gap-2 md:gap-3">
               <button
                 onClick={() => scroll("left")}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/5 bg-zinc-900/50 text-white transition-all hover:border-lime-400/30 hover:bg-zinc-800 hover:text-lime-400"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/5 bg-zinc-900/50 text-white transition-all hover:border-lime-400/30 hover:bg-zinc-800 hover:text-lime-400 md:h-12 md:w-12"
                 aria-label="Scroll left"
               >
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -102,7 +107,7 @@ export default function ExchangesSection2() {
               </button>
               <button
                 onClick={() => scroll("right")}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/5 bg-zinc-900/50 text-white transition-all hover:border-lime-400/30 hover:bg-zinc-800 hover:text-lime-400"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/5 bg-zinc-900/50 text-white transition-all hover:border-lime-400/30 hover:bg-zinc-800 hover:text-lime-400 md:h-12 md:w-12"
                 aria-label="Scroll right"
               >
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

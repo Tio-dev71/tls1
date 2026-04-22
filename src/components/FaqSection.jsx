@@ -17,11 +17,11 @@ export default function FaqSection() {
           {faqs.map((item, index) => (
             <Reveal key={item.q} delay={index * 70}>
               <details className="group border-b border-zinc-900 py-6 transition duration-300">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-white uppercase tracking-wide text-sm">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-white tracking-wide">
                   {item.q}
                   <span className="text-zinc-500 transition group-open:rotate-45">+</span>
                 </summary>
-                <p className="mt-4 leading-relaxed text-zinc-400 pr-12">{item.a}</p>
+                <p className="mt-4 leading-relaxed text-zinc-400 pr-12 whitespace-pre-line">{item.a}</p>
               </details>
             </Reveal>
           ))}

@@ -21,9 +21,9 @@ export default function HomePage({ onOpenGuide }) {
       <FeaturesSection />
       <BenefitsSection />
       <TestimonialsSection />
-      <FaqSection />
       {/* <ReasonSection /> */}
       <DiscordSection />
+      <FaqSection />
     </>
   );
 }

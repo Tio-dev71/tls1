@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 export default function StatsSection() {
   const customStats = [
     { label: "Trader tham gia", value: "12,000+" },
-    { label: "Đã hoàn phí", value: "2.3M+" },
+    { label: "Đã hoàn phí", value: "$2.3M+" },
     { label: "Sàn giao dịch", value: "6+" }
   ];
 

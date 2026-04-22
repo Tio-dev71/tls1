@@ -8,8 +8,8 @@ export default function HeroSection({ onOpenGuide }) {
       <div className="glow-dot-matrix"></div>
       
       <Container className="relative z-10 flex flex-col items-center">
-        <Reveal className="mb-6 inline-flex rounded-full border border-neon-400/20 bg-neon-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-neon-400" delay={80}>
-          Chào mừng bạn tới với Traderlaso1
+        <Reveal className="-mt-6 md:-mt-8 mb-6 inline-flex rounded-full border border-neon-400/20 bg-neon-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-neon-400" delay={80}>
+          Chào mừng bạn đến với Traderlaso1
         </Reveal>
 
         <Reveal as="h1" className="max-w-4xl text-5xl font-black leading-tight tracking-tight text-white md:text-7xl" delay={140}>
@@ -19,7 +19,7 @@ export default function HeroSection({ onOpenGuide }) {
         </Reveal>
 
         <Reveal as="p" className="mt-8 max-w-2xl text-lg md:text-xl leading-relaxed text-zinc-400 font-light" delay={220}>
-          Khi đăng ký hoàn phí trong hệ thống: Trade Crypto & Forex, Bot tự động ghi nhận phí, hoàn phí sau mỗi 23h hàng ngày, cộng đồng tín hiệu VIP.
+          Khi đăng ký hoàn phí trong hệ thống: Trade Crypto & Forex, Bot tự động ghi nhận & hoàn phí sau mỗi ngày. Có cộng đồng tín hiệu & nhóm tín hiệu hỗ trợ.
         </Reveal>
 
         <Reveal className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full justify-center max-w-md mx-auto" delay={300}>

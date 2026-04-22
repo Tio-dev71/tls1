@@ -11,6 +11,7 @@ const botFeatures = [
 ];
 
 const images = [
+  "/picDis/anh7.png",
   "/picDis/anh1.png",
   "/picDis/anh2.png",
   "/picDis/anh3.png",
@@ -38,14 +39,22 @@ export default function DiscordSection() {
             <SectionBadge>Discord Community + Smart Bot</SectionBadge>
 
             <h2 className="mt-4 text-3xl font-black leading-tight text-white md:text-5xl">
-              Một hệ thống
+              Hệ thống giao dịch
               <span className="text-lime-300"> tất cả trong 1 cho trader</span>
             </h2>
 
             <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300">
-              🤖 Bot hỗ trợ trader 24/7 + tín hiệu mỗi ngày
-              Hỏi đáp, phân tích và nhận plan giao dịch ngay trong Discord — tất cả trong 1 hệ thống
-              Signal + Bot + Cộng đồng
+              <ul>
+                <li>
+                  🤖 Bot hỗ trợ trader 24/7 + tín hiệu mỗi ngày
+                </li>
+                <li>
+                  Phân tích, hỏi đáp & nhận plan giao dịch trực tiếp trong Discord
+                </li>
+                <li>
+                  → Tất cả trong 1 hệ thống: Signal + Bot + Cộng đồng
+                </li>
+              </ul>
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">

@@ -438,11 +438,13 @@ img {
   padding: 1.5px;
 }
 
-.hover-glow-border:hover::after {
+.hover-glow-border:hover::after,
+.active-glow-border::after {
   opacity: 1;
 }
 
-.hover-glow-border:hover {
+.hover-glow-border:hover,
+.active-glow-border {
   box-shadow: 
     0 0 40px rgba(163, 230, 53, 0.25),
     inset 0 1px 3px rgba(255, 255, 255, 0.6);

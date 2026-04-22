@@ -18,7 +18,7 @@ export default function PartnerMarquee() {
   const duplicated = [...partnerLogos, ...partnerLogos];
 
   return (
-    <section className="relative py-10 border-y border-zinc-900 bg-black/50">
+    <section className="relative py-4 border-y border-zinc-900 bg-black/50">
       <Container>
         <Reveal className="mb-8 text-center" delay={100}>
           <div className="text-sm font-medium text-zinc-500 uppercase tracking-widest">
@@ -26,7 +26,7 @@ export default function PartnerMarquee() {
           </div>
         </Reveal>
 
-        <Reveal className="partner-marquee-mask py-4" duration={900} delay={200}>
+        <Reveal className="partner-marquee-mask" duration={900} delay={200}>
           <div className="partner-marquee-track">
             {duplicated.map((item, index) => (
               <div key={`${item.slug}-${index}`} className="partner-marquee-item px-6">
