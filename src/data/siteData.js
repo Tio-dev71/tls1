@@ -12,7 +12,7 @@ export const exchanges = [
 
 export const features = [
   {
-    title: "🎁 Hoàn phí 30–50% mỗi lệnh",
+    title: "🚀 Hoàn phí lên đến 50% mỗi lệnh",
     desc: "Giữ lại nhiều lợi nhuận hơn",
   },
   {

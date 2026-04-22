@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import Container from "./Container";
 import SectionBadge from "./SectionBadge";
 import Reveal from "./Reveal";
@@ -9,7 +9,7 @@ export default function ExchangesSection2() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (scrollRef.current) {
       const container = scrollRef.current;
       const scrollLeft = container.scrollLeft;
@@ -26,11 +26,9 @@ export default function ExchangesSection2() {
         }
       });
       
-      if (closestIndex !== activeIndex) {
-        setActiveIndex(closestIndex);
-      }
+      setActiveIndex((prev) => (closestIndex !== prev ? closestIndex : prev));
     }
-  };
+  }, []);
 
   useEffect(() => {
     const container = scrollRef.current;
@@ -38,7 +36,7 @@ export default function ExchangesSection2() {
       container.addEventListener("scroll", handleScroll, { passive: true });
       return () => container.removeEventListener("scroll", handleScroll);
     }
-  }, [activeIndex]);
+  }, [handleScroll]);
 
   const scroll = (direction) => {
     if (scrollRef.current) {

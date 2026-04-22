@@ -24,8 +24,8 @@ export default function FeaturesSection() {
               <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-neon-400/10 to-transparent"></div>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-white mb-2">{features[0].title}</h3>
-              <p className="text-zinc-400 leading-relaxed">{features[0].desc}</p>
+              <h3 className="text-xl font-bold text-white mb-2">{features[0].title}</h3>
+              {/* <p className="text-zinc-400 leading-relaxed">{features[0].desc}</p> */}
             </div>
           </Reveal>
 
@@ -35,13 +35,13 @@ export default function FeaturesSection() {
               <Reveal delay={200} className="flex flex-col justify-center rounded-[2rem] border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-8 hover-panel hover-glow-border">
                 {/* <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-black border border-zinc-800 text-2xl">🤖</div> */}
                 <h3 className="text-xl font-bold text-white mb-2">{features[1].title}</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">{features[1].desc}</p>
+                {/* <p className="text-zinc-400 text-sm leading-relaxed">{features[1].desc}</p> */}
               </Reveal>
 
               <Reveal delay={300} className="flex flex-col justify-center rounded-[2rem] border border-lime-400/25 bg-white/[0.02] backdrop-blur-xl p-8 hover-panel hover-glow-border">
                 {/* <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-black border border-zinc-800 text-2xl">💸</div> */}
                 <h3 className="text-xl font-bold text-white mb-2">{features[2].title}</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">{features[2].desc}</p>
+                {/* <p className="text-zinc-400 text-sm leading-relaxed">{features[2].desc}</p> */}
               </Reveal>
             </div>
 
@@ -53,7 +53,7 @@ export default function FeaturesSection() {
                   <span className="flex items-center gap-1.5 rounded-full border border-zinc-700 bg-black px-3 py-1 text-xs text-zinc-300"><span className="w-2 h-2 rounded-full bg-blue-400"></span>Cộng đồng</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{features[3].title}</h3>
-                <p className="text-zinc-400 text-sm">{features[3].desc}</p>
+                {/* <p className="text-zinc-400 text-sm">{features[3].desc}</p> */}
               </div>
               <div className="flex -space-x-4">
                 <img src="/avartarMember/Lio.png" className="w-12 h-12 rounded-full border-2 border-zinc-900 object-cover" alt="Member 1" />
