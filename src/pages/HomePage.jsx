@@ -1,8 +1,8 @@
 import HeroSection from "../components/HeroSection";
 import StatsSection from "../components/StatsSection";
 import FeaturesSection from "../components/FeaturesSection";
-import ExchangesSection from "../components/ExchangesSection";
-// import ExchangesSection2 from "../components/ExchangesSection2";
+// import ExchangesSection from "../components/ExchangesSection";
+import ExchangesSection2 from "../components/ExchangesSection2";
 import BenefitsSection from "../components/BenefitsSection";
 // import ReasonSection from "../components/ReasonSection";
 import TestimonialsSection from "../components/TestimonialsSection";
@@ -16,8 +16,8 @@ export default function HomePage({ onOpenGuide }) {
       <HeroSection onOpenGuide={onOpenGuide} />
       <StatsSection />
       <PartnerMarquee />
-      <ExchangesSection />
-      {/* <ExchangesSection2 /> */}
+      {/* <ExchangesSection /> */}
+      <ExchangesSection2 />
       <FeaturesSection />
       <BenefitsSection />
       <TestimonialsSection />
