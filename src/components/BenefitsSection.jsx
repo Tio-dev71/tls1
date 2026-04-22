@@ -58,9 +58,6 @@ export default function BenefitsSection() {
             </div>
           </div>
         </Reveal>
-        <Reveal className="mt-5 text-center flex flex-col items-center">
-          <SectionBadge>Không cam kết lợi nhuận – trading luôn có rủi ro</SectionBadge>
-        </Reveal>
       </Container>
     </section>
   );
