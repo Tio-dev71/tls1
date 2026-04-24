@@ -32,32 +32,20 @@ export default function DiscordSection() {
   }, []);
 
   return (
-    <section id="discord" className="py-16">
+    <section id="discord" className="py-24">
       <Container>
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-          <Reveal>
-            <SectionBadge>Discord Community + Smart Bot</SectionBadge>
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="flex flex-col items-start text-left">
+            <Reveal>
+              <SectionBadge>Discord Community + Smart Bot</SectionBadge>
 
-            <h2 className="mt-4 text-3xl font-black leading-tight text-white md:text-5xl">
-              Hệ thống giao dịch
-              <span className="text-lime-300"> tất cả trong 1 cho trader</span>
-            </h2>
+              <h2 className="mt-4 text-3xl font-black leading-tight text-white md:text-5xl">
+                Hệ thống giao dịch
+                <span className="text-lime-300"> tất cả trong 1 cho trader</span>
+              </h2>
+            </Reveal>
 
-            {/* <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300">
-              <ul>
-                <li>
-                  🤖 Bot hỗ trợ trader 24/7 + tín hiệu mỗi ngày
-                </li>
-                <li>
-                  Phân tích, hỏi đáp & nhận plan giao dịch trực tiếp trong Discord
-                </li>
-                <li>
-                  → Tất cả trong 1 hệ thống: Signal + Bot + Cộng đồng
-                </li>
-              </ul>
-            </p> */}
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            <div className="mt-8 grid gap-3 w-full sm:grid-cols-2">
               {botFeatures.map((item, index) => (
                 <Reveal
                   key={item}
@@ -70,61 +58,42 @@ export default function DiscordSection() {
               ))}
             </div>
 
-            <Reveal className="relative mt-8" delay={180} duration={900} variant="right">
-              <div className="absolute -left-8 top-10 h-28 w-28 rounded-full bg-lime-400/10 blur-3xl" />
-              <div className="absolute -right-8 bottom-10 h-36 w-36 rounded-full bg-lime-300/10 blur-3xl" />
-
-              <div className="card-sheen relative rounded-[2rem] border border-lime-400/20 bg-zinc-950/90 p-5 shadow-[0_0_40px_rgba(163,230,53,0.08)]">
-                <div className="mb-4 flex items-center justify-between border-b border-zinc-800 pb-4">
-                  <div>
-                    <div className="text-sm text-zinc-400">Preview trải nghiệm</div>
-                    <div className="text-xl font-bold text-white">Discord Bot Demo</div>
-                  </div>
-                  <div className="rounded-full border border-lime-400/20 bg-lime-400/10 px-3 py-1 text-xs text-lime-300">
-                    Online
-                  </div>
-                </div>
-
-                <div className="mt-6 overflow-hidden rounded-2xl border border-zinc-800">
-                  <img
-                    key={images[pic]}
-                    src={images[pic]}
-                    alt="Discord preview"
-                    className="showcase-image min-h-80 w-full object-cover"
-                  />
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal className="mt-8 flex flex-wrap gap-4 justify-center" delay={220}>
+            <Reveal className="mt-10" delay={220}>
               <a
                 href="https://discord.gg/psZnKmM82d"
                 target="_blank"
                 rel="noreferrer"
-                className="button-glow rounded-full bg-lime-400 px-6 py-3 font-semibold text-black transition hover:scale-105"
+                className="button-glow rounded-full bg-lime-400 px-8 py-4 font-bold text-black transition hover:scale-105 inline-block"
               >
                 Vào Discord ngay
               </a>
-
-              {/* <a
-                href="#faq"
-                className="hover-lift rounded-full border border-zinc-700 px-6 py-3 font-semibold text-white transition hover:border-lime-400/40 hover:text-lime-300"
-              >
-                Xem tính năng
-              </a> */}
             </Reveal>
+          </div>
 
-            {/* <Reveal className="mt-6 flex flex-wrap gap-3 text-sm text-zinc-400" delay={260}>
-              <div className="rounded-full border border-lime-400/20 bg-lime-400/10 px-4 py-2 text-lime-300">
-                24/7 hỗ trợ
+          <Reveal className="relative mt-12 lg:mt-0" delay={180} duration={900} variant="right">
+            <div className="absolute -left-8 top-10 h-28 w-28 rounded-full bg-lime-400/10 blur-3xl" />
+            <div className="absolute -right-8 bottom-10 h-36 w-36 rounded-full bg-lime-300/10 blur-3xl" />
+
+            <div className="card-sheen relative rounded-[2rem] border border-lime-400/20 bg-zinc-950/90 p-5 shadow-[0_0_40px_rgba(163,230,53,0.08)]">
+              <div className="mb-4 flex items-center justify-between border-b border-zinc-800 pb-4">
+                <div>
+                  <div className="text-sm text-zinc-400">Preview trải nghiệm</div>
+                  <div className="text-xl font-bold text-white">Discord Bot Demo</div>
+                </div>
+                <div className="rounded-full border border-lime-400/20 bg-lime-400/10 px-3 py-1 text-xs text-lime-300">
+                  Online
+                </div>
               </div>
-              <div className="rounded-full border border-zinc-800 bg-zinc-950/80 px-4 py-2">
-                Quản lý cộng đồng dễ hơn
+
+              <div className="mt-6 overflow-hidden rounded-2xl border border-zinc-800">
+                <img
+                  key={images[pic]}
+                  src={images[pic]}
+                  alt="Discord preview"
+                  className="showcase-image min-h-80 w-full object-cover"
+                />
               </div>
-              <div className="rounded-full border border-zinc-800 bg-zinc-950/80 px-4 py-2">
-                Dùng trực tiếp trong server
-              </div>
-            </Reveal> */}
+            </div>
           </Reveal>
         </div>
       </Container>
